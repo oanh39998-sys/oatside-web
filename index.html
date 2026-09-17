@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OATSIDE - Sữa Yến Mạch Béo Bùi Chuẩn Barista | Thơm Ngon Bất Ngờ</title>
+  <meta name="description" content="Khám phá Oatside - dòng sữa yến mạch béo bùi, sánh mịn tự nhiên từ yến mạch Tây Úc rang xém. Không lactose, chuẩn bọt barista latte art." />
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            oat: {
+              cream: '#FAF6F0',
+              beige: '#F1E9DA',
+              card: '#FFFFFF',
+              dark: '#1C1917',
+              charcoal: '#2D2824',
+              brown: '#84502E',
+              caramel: '#C86D33',
+              yellow: '#F5C242',
+              green: '#2A6348',
+              choco: '#422416'
+            }
+          },
+          fontFamily: {
+            display: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          },
+          boxShadow: {
+            'comic': '4px 4px 0px 0px #1C1917',
+            'comic-lg': '8px 8px 0px 0px #1C1917',
+            'comic-sm': '2px 2px 0px 0px #1C1917',
+            'comic-hover': '2px 2px 0px 0px #1C1917',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(-2deg)' },
+              '50%': { transform: 'rotate(2deg)' },
+            },
+            pulseSlow: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.6' }
+            }
+          },
+          animation: {
+            float: 'float 4s ease-in-out infinite',
+            wiggle: 'wiggle 2s ease-in-out infinite',
+            pulseSlow: 'pulseSlow 2.5s infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbar and aesthetics */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF6F0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C86D33;
+      border-radius: 5px;
+      border: 2px solid #FAF6F0;
+    }
+    .badge-rotation {
+      transform: rotate(-3deg);
+    }
+  </style>
+</head>
+
+<body class="bg-oat-cream text-oat-dark font-body antialiased selection:bg-oat-yellow selection:text-oat-dark">
+
+  <!-- =========================================================================
+       TOP ANNOUNCEMENT BAR (FOMO / Hook)
+       ========================================================================= -->
+  <aside class="bg-oat-yellow border-b-2 border-oat-dark py-2 px-4 text-center font-display font-bold text-xs md:text-sm tracking-wide flex items-center justify-center gap-2 relative z-50">
+    <span class="inline-block animate-wiggle">⚡</span>
+    <span>ƯU ĐÃI ĐỘC QUYỀN MÙA HÈ: MUA COMBO 3 HỘP TẶNG NGAY BÌNH GIỮ NHIỆT OATSIDE + FREESHIP TOÀN QUỐC</span>
+    <span class="hidden md:inline-block bg-oat-dark text-white text-[11px] px-2 py-0.5 rounded-full uppercase ml-2">Mã: OATMEGANON</span>
+  </aside>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-oat-cream/90 backdrop-blur-md border-b-2 border-oat-dark transition-all duration-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="bg-oat-dark text-white px-3 py-1 font-display font-black text-2xl tracking-tighter rounded-lg border-2 border-oat-dark shadow-comic-sm group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:shadow-none transition-all">
+          OATSIDE
+        </div>
+        <span class="font-display font-extrabold text-sm tracking-widest text-oat-brown uppercase hidden sm:inline-block">Vietnam</span>
+      </a>
+
+      <!-- DESKTOP MENU -->
+      <ul class="hidden md:flex items-center gap-8 font-display font-bold text-base">
+        <li><a href="#about" class="hover:text-oat-caramel transition-colors">Về Oatside</a></li>
+        <li><a href="#reviews" class="hover:text-oat-caramel transition-colors">Đánh Giá (50k+)</a></li>
+        <li><a href="#flavors" class="hover:text-oat-caramel transition-colors">Hương Vị</a></li>
+        <li><a href="#pricing" class="hover:text-oat-caramel transition-colors">Bảng Giá & Combo</a></li>
+        <li><a href="#faq" class="hover:text-oat-caramel transition-colors">Hỏi Đáp</a></li>
+      </ul>
+
+      <!-- CTA BUTTON -->
+      <div class="flex items-center gap-3">
+        <a href="#pricing" class="bg-oat-caramel text-white font-display font-extrabold px-5 py-2.5 rounded-xl border-2 border-oat-dark shadow-comic hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 flex items-center gap-2 text-sm sm:text-base">
+          <span>Đặt Hàng Ngay</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border-2 border-oat-dark bg-white shadow-comic-sm focus:outline-none" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-oat-cream border-b-2 border-oat-dark px-6 py-5 space-y-3 font-display font-bold text-lg">
+      <a href="#about" class="block py-2 text-oat-dark hover:text-oat-caramel">Về Oatside</a>
+      <a href="#reviews" class="block py-2 text-oat-dark hover:text-oat-caramel">Đánh Giá (50k+)</a>
+      <a href="#flavors" class="block py-2 text-oat-dark hover:text-oat-caramel">Hương Vị</a>
+      <a href="#pricing" class="block py-2 text-oat-dark hover:text-oat-caramel">Bảng Giá & Combo</a>
+      <a href="#faq" class="block py-2 text-oat-dark hover:text-oat-caramel">Hỏi Đáp</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         THÀNH PHẦN 1: HERO SECTION (ATTENTION - THU HÚT TRONG 3 GIÂY ĐẦU)
+         ========================================================================= -->
+    <section class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24 border-b-2 border-oat-dark">
+      <!-- Background Graphic Elements -->
+      <div class="absolute top-10 left-6 text-6xl opacity-20 select-none animate-float">🌾</div>
+      <div class="absolute bottom-16 right-10 text-7xl opacity-20 select-none animate-wiggle">☕</div>
+      <div class="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-oat-yellow/30 blur-3xl -z-10"></div>
+      <div class="absolute bottom-10 left-1/4 w-96 h-96 rounded-full bg-oat-beige/60 blur-2xl -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- LEFT CONTENT: 3-Second Hook & Punchy Copy -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <!-- Quick Attention Badge -->
+            <div class="inline-flex items-center gap-2 bg-white border-2 border-oat-dark px-4 py-1.5 rounded-full shadow-comic-sm text-xs sm:text-sm font-display font-extrabold text-oat-brown">
+              <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-ping"></span>
+              <span>100% Yến Mạch Tây Úc Rang Xém • Không Sữa Bò</span>
+            </div>
+
+            <!-- Big Main Headline -->
+            <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-oat-dark leading-[1.1] tracking-tight">
+              Sữa Yến Mạch <span class="bg-oat-yellow px-2 py-0.5 rounded-lg border-2 border-oat-dark inline-block rotate-[-1deg]">Béo Bùi Đỉnh Chóp,</span> Ngon Đến Mức Bò Cũng Phải Ghen Tị!
+            </h1>
+
+            <!-- Subheadline with emotional connection -->
+            <p class="text-base sm:text-lg lg:text-xl text-oat-charcoal font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Bạn từng nghĩ sữa thực vật thì nhạt nhẽo và khó uống? Oatside ở đây để chứng minh điều ngược lại: <strong class="text-oat-brown">sánh mịn ngất ngây</strong>, thơm lừng mùi yến mạch nướng, bọt sữa đánh chuẩn latte art mà không lo đau bụng hay dị ứng lactose!
+            </p>
+
+            <!-- Call to Actions & Trust Indicators -->
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a href="#pricing" class="w-full sm:w-auto bg-oat-dark text-white font-display font-extrabold text-lg px-8 py-4 rounded-2xl border-2 border-oat-dark shadow-comic-lg hover:shadow-comic hover:translate-x-1 hover:translate-y-1 transition-all flex items-center justify-center gap-3">
+                <span>Trải Nghiệm Vị Béo Ngay</span>
+                <span class="bg-oat-yellow text-oat-dark text-xs px-2 py-0.5 rounded-md font-bold uppercase">Giảm 20%</span>
+              </a>
+
+              <a href="#flavors" class="w-full sm:w-auto bg-white text-oat-dark font-display font-bold text-base px-6 py-4 rounded-2xl border-2 border-oat-dark shadow-comic hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all flex items-center justify-center gap-2">
+                <span>Khám phá 3 hương vị</span>
+                <svg class="w-5 h-5 text-oat-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </a>
+            </div>
+
+            <!-- Mini Trust Elements Under Hero CTA -->
+            <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs sm:text-sm font-bold text-oat-charcoal">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span>0% Đường Tinh Luyện</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span>Thân Thiện Dạ Dày (Lactose-Free)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span>Freeship Đơn Từ 2 Hộp</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT CONTENT: Interactive Product Showcase / Visual Hero -->
+          <div class="lg:col-span-5 relative flex flex-col items-center">
+            
+            <!-- Playful Float Badge -->
+            <div class="absolute -top-5 -right-2 sm:right-6 bg-oat-yellow border-2 border-oat-dark px-4 py-2 rounded-2xl shadow-comic font-display font-black text-xs sm:text-sm uppercase tracking-wider z-20 badge-rotation animate-float">
+              ⭐ Vị Ngon Gây Nghiện!
+            </div>
+
+            <!-- Product Card Interactive Display -->
+            <div id="product-card" class="w-full max-w-sm bg-white rounded-3xl border-4 border-oat-dark shadow-comic-lg p-6 sm:p-8 text-center relative transition-all duration-300">
+              
+              <!-- Product Image Mockup (Vector Illustration Style) -->
+              <div class="w-48 h-64 mx-auto mb-6 relative flex items-center justify-center">
+                <!-- Decorative Circle -->
+                <div id="product-glow" class="w-44 h-44 rounded-full bg-oat-yellow/40 absolute -z-0 transition-colors duration-300"></div>
+                
+                <!-- Stylized Oat Milk Carton SVG -->
+                <svg class="w-36 h-56 relative z-10 filter drop-shadow-md transform transition-transform duration-300 hover:scale-105" viewBox="0 0 100 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Carton Top Gable -->
+                  <path d="M20 30L35 15L65 15L80 30H20Z" fill="#F4E9D8" stroke="#1C1917" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M35 15L50 8L65 15" stroke="#1C1917" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Carton Body -->
+                  <rect x="20" y="30" width="60" height="120" rx="6" fill="#FFFFFF" stroke="#1C1917" stroke-width="3"/>
+                  <!-- Accent Color Band -->
+                  <rect id="svg-band" x="20" y="60" width="60" height="36" fill="#C86D33"/>
+                  <text id="svg-band-text" x="50" y="83" fill="#FFFFFF" font-size="10" font-family="'Outfit', sans-serif" font-weight="900" text-anchor="middle">BARISTA</text>
+                  <!-- Brand Logo Text on Carton -->
+                  <text x="50" y="52" fill="#1C1917" font-size="9" font-family="'Outfit', sans-serif" font-weight="900" text-anchor="middle" letter-spacing="1">OATSIDE</text>
+                  <!-- Bear Face Mascot Illustration -->
+                  <circle cx="50" cy="115" r="14" fill="#1C1917"/>
+                  <circle cx="45" cy="113" r="1.5" fill="#FFFFFF"/>
+                  <circle cx="55" cy="113" r="1.5" fill="#FFFFFF"/>
+                  <ellipse cx="50" cy="118" rx="3.5" ry="2" fill="#FAF6F0"/>
+                  <circle cx="41" cy="104" r="3.5" fill="#1C1917"/>
+                  <circle cx="59" cy="104" r="3.5" fill="#1C1917"/>
+                  <path d="M47 122Q50 125 53 122" stroke="#1C1917" stroke-width="1.5" stroke-linecap="round"/>
+                  <!-- Mini Oatside Text -->
+                  <text x="50" y="142" fill="#84502E" font-size="6" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" text-anchor="middle">1000ml • Plant Milk</text>
+                </svg>
+
+                <!-- Floating Little Sparkle Icon -->
+                <div class="absolute bottom-2 left-2 bg-oat-yellow rounded-xl p-2 border-2 border-oat-dark shadow-comic-sm text-lg animate-bounce">
+                  ✨
+                </div>
+              </div>
+
+              <!-- Product Dynamic Label -->
+              <div class="space-y-2">
+                <span id="flavor-badge" class="inline-block bg-oat-caramel text-white text-xs font-display font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                  Bestseller #1
+                </span>
+                <h3 id="flavor-name" class="font-display font-black text-2xl text-oat-dark">
+                  Barista Blend 1000ml
+                </h3>
+                <p id="flavor-desc" class="text-sm text-oat-charcoal font-medium">
+                  Hương vị nguyên bản béo ngậy tự nhiên, sinh ra để phối hợp hoàn hảo với Espresso và Matcha.
+                </p>
+              </div>
+
+              <!-- Interactive Selector for 3 Flavors -->
+              <div class="mt-6 pt-5 border-t-2 border-dashed border-gray-300">
+                <p class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Chọn vị bạn muốn nếm thử:</p>
+                <div class="grid grid-cols-3 gap-2">
+                  <button onclick="switchFlavor('barista')" id="btn-barista" class="flavor-btn py-2 px-1 text-xs font-display font-black rounded-xl border-2 border-oat-dark bg-oat-caramel text-white shadow-comic-sm transition-transform scale-105">
+                    Barista
+                  </button>
+                  <button onclick="switchFlavor('chocolate')" id="btn-chocolate" class="flavor-btn py-2 px-1 text-xs font-display font-black rounded-xl border-2 border-oat-dark bg-white text-oat-dark hover:bg-gray-100 transition-transform">
+                    Chocolate
+                  </button>
+                  <button onclick="switchFlavor('coffee')" id="btn-coffee" class="flavor-btn py-2 px-1 text-xs font-display font-black rounded-xl border-2 border-oat-dark bg-white text-oat-dark hover:bg-gray-100 transition-transform">
+                    Coffee
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         THÀNH PHẦN 2: SOCIAL PROOF (XÂY DỰNG NIỀM TIN BAN ĐẦU - TRUST)
+         ========================================================================= -->
+    <section id="reviews" class="py-14 bg-white border-b-2 border-oat-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Trust Metrics Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center border-b-2 border-dashed border-gray-300 pb-12">
+          <div class="p-4">
+            <div class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-oat-caramel">50,000+</div>
+            <p class="text-xs sm:text-sm font-bold text-oat-charcoal mt-1">Hộp sữa được tiêu thụ mỗi tháng</p>
+          </div>
+          <div class="p-4">
+            <div class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-oat-dark">4.9/5.0 ⭐</div>
+            <p class="text-xs sm:text-sm font-bold text-oat-charcoal mt-1">Đánh giá trung bình từ 12,000+ khách</p>
+          </div>
+          <div class="p-4">
+            <div class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-oat-brown">850+</div>
+            <p class="text-xs sm:text-sm font-bold text-oat-charcoal mt-1">Quán cafe Specialty đối tác tin dùng</p>
+          </div>
+          <div class="p-4">
+            <div class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-green-700">98%</div>
+            <p class="text-xs sm:text-sm font-bold text-oat-charcoal mt-1">Khách hàng xác nhận không bị đau bụng</p>
+          </div>
+        </div>
+
+        <!-- Featured Cafe Logos Bar -->
+        <div class="pt-10 pb-6 text-center">
+          <p class="font-display font-extrabold text-xs sm:text-sm uppercase tracking-widest text-gray-500 mb-6">
+            ĐỐI TÁC SỮA HẠT ĐƯỢC CÁC CHUYÊN GIA BARISTA & QUÁN CÀ PHÊ HÀNG ĐẦU TIN DÙNG
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-75 grayscale hover:grayscale-0 transition-all">
+            <span class="font-display font-black text-xl sm:text-2xl text-oat-dark tracking-tighter">THE COFFEE HOUSE</span>
+            <span class="font-display font-black text-xl sm:text-2xl text-oat-dark tracking-tighter">43 FACTORY</span>
+            <span class="font-display font-black text-xl sm:text-2xl text-oat-dark tracking-tighter">BOSGAURUS COFFEE</span>
+            <span class="font-display font-black text-xl sm:text-2xl text-oat-dark tracking-tighter">EVERY HALF</span>
+            <span class="font-display font-black text-xl sm:text-2xl text-oat-dark tracking-tighter">LA VIET COFFEE</span>
+          </div>
+        </div>
+
+        <!-- Real Customer Testimonials (Cards) -->
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Review 1: Barista -->
+          <div class="bg-oat-cream p-6 rounded-2xl border-2 border-oat-dark shadow-comic flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center gap-1 text-oat-yellow text-lg">
+                ★★★★★
+              </div>
+              <p class="text-sm sm:text-base font-medium text-oat-dark italic">
+                “Mình là barista đã 6 năm, thử qua từ đậu nành, hạnh nhân đến nhiều hãng yến mạch. Oatside là sữa thực vật duy nhất đánh micro-foam bóng bẩy, vẽ latte art mượt mà và tôn trọn hương thơm của hạt cà phê mà không bị chua!”
+              </p>
+            </div>
+            <div class="mt-6 flex items-center gap-3 pt-4 border-t border-oat-beige">
+              <div class="w-11 h-11 rounded-full bg-oat-caramel text-white font-display font-black flex items-center justify-center border-2 border-oat-dark">
+                HT
+              </div>
+              <div>
+                <h4 class="font-display font-black text-sm text-oat-dark">Hoàng Tuấn</h4>
+                <p class="text-xs text-gray-600 font-semibold">Head Barista tại Specialty Coffee Saigon</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2: Lactose Intolerant Gen Z -->
+          <div class="bg-oat-cream p-6 rounded-2xl border-2 border-oat-dark shadow-comic flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center gap-1 text-oat-yellow text-lg">
+                ★★★★★
+              </div>
+              <p class="text-sm sm:text-base font-medium text-oat-dark italic">
+                “Cứ uống sữa bò là bụng biểu tình dữ dội, phải bỏ cafe sữa 2 năm trời. Từ ngày biết Oatside thì cứu rỗi cuộc đời! Béo ngậy gấp đôi sữa tươi mà bụng êm ru cả ngày. Vị Chocolate lạnh uống cuốn xỉu!”
+              </p>
+            </div>
+            <div class="mt-6 flex items-center gap-3 pt-4 border-t border-oat-beige">
+              <div class="w-11 h-11 rounded-full bg-oat-yellow text-oat-dark font-display font-black flex items-center justify-center border-2 border-oat-dark">
+                MN
+              </div>
+              <div>
+                <h4 class="font-display font-black text-sm text-oat-dark">Minh Ngọc</h4>
+                <p class="text-xs text-gray-600 font-semibold">Content Creator • 24 tuổi, Hà Nội</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3: Fitness & Clean Eating -->
+          <div class="bg-oat-cream p-6 rounded-2xl border-2 border-oat-dark shadow-comic flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center gap-1 text-oat-yellow text-lg">
+                ★★★★★
+              </div>
+              <p class="text-sm sm:text-base font-medium text-oat-dark italic">
+                “Check bảng dinh dưỡng thấy 0% đường tinh luyện, vị ngọt thanh tự nhiên do enzyme chuyển hoá yến mạch. Pha chung với whey protein hoặc ăn kèm yến mạch qua đêm (overnight oats) ngon đỉnh!”
+              </p>
+            </div>
+            <div class="mt-6 flex items-center gap-3 pt-4 border-t border-oat-beige">
+              <div class="w-11 h-11 rounded-full bg-green-600 text-white font-display font-black flex items-center justify-center border-2 border-oat-dark">
+                ĐK
+              </div>
+              <div>
+                <h4 class="font-display font-black text-sm text-oat-dark">Đăng Khoa</h4>
+                <p class="text-xs text-gray-600 font-semibold">Huấn luyện viên Fitness & Healthy Lifestyle</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         THÀNH PHẦN 3: FEATURES & BENEFITS (KÍCH THÍCH SỰ QUAN TÂM & KHAO KHÁT)
+         ========================================================================= -->
+    <section id="about" class="py-16 lg:py-24 bg-oat-cream border-b-2 border-oat-dark relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="inline-block bg-white border-2 border-oat-dark px-4 py-1 rounded-full text-xs sm:text-sm font-display font-black text-oat-caramel uppercase shadow-comic-sm">
+            TẠI SAO LẠI LÀ OATSIDE?
+          </span>
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-oat-dark tracking-tight">
+            Chúng Tôi Không Chỉ Làm Sữa Hạt. <br class="hidden sm:inline" />
+            Chúng Tôi Tạo Ra <span class="text-oat-caramel underline decoration-wavy decoration-oat-yellow">Trải Nghiệm Hương Vị Khó Quên!</span>
+          </h2>
+          <p class="text-base sm:text-lg text-oat-charcoal font-medium">
+            Tạm biệt những hộp sữa hạt nhiều cặn bột, nhạt toẹt hoặc nồng mùi hương liệu. Hãy khám phá công nghệ và tình yêu chúng tôi đặt vào từng giọt sữa.
+          </p>
+        </div>
+
+        <!-- 4 Key Benefits Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Benefit 1 -->
+          <div class="bg-white p-7 rounded-3xl border-2 border-oat-dark shadow-comic hover:shadow-comic-lg hover:-translate-y-1 transition-all">
+            <div class="w-14 h-14 bg-oat-yellow rounded-2xl border-2 border-oat-dark flex items-center justify-center text-3xl mb-6 shadow-comic-sm">
+              🔥
+            </div>
+            <h3 class="font-display font-black text-xl text-oat-dark mb-3">Yến Mạch Rang Xém Độc Quyền</h3>
+            <p class="text-sm text-oat-charcoal leading-relaxed">
+              Yến mạch tuyển chọn từ Tây Úc được rang xém vừa tới trước khi chiết xuất, giữ lại vị ngọt mạch nha nguyên bản và hương thơm nướng mộc mạc khó cưỡng.
+            </p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="bg-white p-7 rounded-3xl border-2 border-oat-dark shadow-comic hover:shadow-comic-lg hover:-translate-y-1 transition-all">
+            <div class="w-14 h-14 bg-oat-caramel rounded-2xl border-2 border-oat-dark flex items-center justify-center text-3xl mb-6 shadow-comic-sm text-white">
+              ☕
+            </div>
+            <h3 class="font-display font-black text-xl text-oat-dark mb-3">Bọt Sữa Chuẩn Micro-Foam</h3>
+            <p class="text-sm text-oat-charcoal leading-relaxed">
+              Cấu trúc đạm và chất béo thực vật hoàn hảo giúp sữa tạo bọt kem mịn sánh, không tách lớp khi tiếp xúc với acid cà phê nhiệt độ cao.
+            </p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="bg-white p-7 rounded-3xl border-2 border-oat-dark shadow-comic hover:shadow-comic-lg hover:-translate-y-1 transition-all">
+            <div class="w-14 h-14 bg-green-200 rounded-2xl border-2 border-oat-dark flex items-center justify-center text-3xl mb-6 shadow-comic-sm">
+              🌱
+            </div>
+            <h3 class="font-display font-black text-xl text-oat-dark mb-3">100% Thuần Thực Vật, Êm Bụng</h3>
+            <p class="text-sm text-oat-charcoal leading-relaxed">
+              Không lactose, không chất béo bão hoà động vật, không gluten biến tính. Nhẹ bụng cả ngày, thích hợp cho người dị ứng sữa động vật và ăn chay.
+            </p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="bg-white p-7 rounded-3xl border-2 border-oat-dark shadow-comic hover:shadow-comic-lg hover:-translate-y-1 transition-all">
+            <div class="w-14 h-14 bg-blue-200 rounded-2xl border-2 border-oat-dark flex items-center justify-center text-3xl mb-6 shadow-comic-sm">
+              🌍
+            </div>
+            <h3 class="font-display font-black text-xl text-oat-dark mb-3">Yêu Trái Đất Gấp 10 Lần</h3>
+            <p class="text-sm text-oat-charcoal leading-relaxed">
+              Quy trình sản xuất yến mạch tiết kiệm đến 90% lượng nước và cắt giảm 70% lượng khí thải carbon so với việc sản xuất sữa bò công nghiệp.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Interactive Comparison Section: Oatside vs Sữa Thường -->
+        <div class="mt-16 bg-white rounded-3xl border-4 border-oat-dark shadow-comic-lg overflow-hidden">
+          <div class="p-6 sm:p-8 bg-oat-dark text-white text-center">
+            <h3 class="font-display font-black text-2xl sm:text-3xl">Bảng So Sánh “Không Nói Dối”</h3>
+            <p class="text-sm text-gray-300 mt-1">Xem điều gì làm Oatside khác biệt hoàn toàn với phần còn lại</p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm sm:text-base">
+              <thead>
+                <tr class="border-b-2 border-oat-dark bg-oat-beige/50 font-display font-extrabold">
+                  <th class="p-4 sm:p-5">Tiêu chí</th>
+                  <th class="p-4 sm:p-5 text-oat-caramel font-black text-lg bg-oat-yellow/20">OATSIDE 🌾</th>
+                  <th class="p-4 sm:p-5 text-gray-600">Sữa Bò Tươi</th>
+                  <th class="p-4 sm:p-5 text-gray-600">Sữa Hạt Khác</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y-2 divide-gray-200 font-medium">
+                <tr>
+                  <td class="p-4 sm:p-5 font-bold">Vị ngon & độ béo</td>
+                  <td class="p-4 sm:p-5 bg-oat-yellow/10 font-bold text-green-700">Béo bùi kem mạch nha, thơm lừng</td>
+                  <td class="p-4 sm:p-5">Béo ngậy nhưng dễ ngán</td>
+                  <td class="p-4 sm:p-5">Thường lỏng loãng, vị nhạt</td>
+                </tr>
+                <tr>
+                  <td class="p-4 sm:p-5 font-bold">Dạ dày (Lactose)</td>
+                  <td class="p-4 sm:p-5 bg-oat-yellow/10 font-bold text-green-700">0% Lactose (Tuyệt đối êm bụng)</td>
+                  <td class="p-4 sm:p-5 text-red-600">Dễ gây đầy hơi, đau bụng</td>
+                  <td class="p-4 sm:p-5">Không có lactose</td>
+                </tr>
+                <tr>
+                  <td class="p-4 sm:p-5 font-bold">Khả năng đánh bọt cà phê</td>
+                  <td class="p-4 sm:p-5 bg-oat-yellow/10 font-bold text-green-700">Bọt micro-foam dẻo mịn, latte art nét</td>
+                  <td class="p-4 sm:p-5">Bọt tốt nhưng che lấp mùi hạt</td>
+                  <td class="p-4 sm:p-5 text-red-600">Khó tạo bọt, nhanh vỡ bọt</td>
+                </tr>
+                <tr>
+                  <td class="p-4 sm:p-5 font-bold">Đường & Chất bảo quản</td>
+                  <td class="p-4 sm:p-5 bg-oat-yellow/10 font-bold text-green-700">Không đường hóa học, không bảo quản</td>
+                  <td class="p-4 sm:p-5">Chứa đường lactose tự nhiên</td>
+                  <td class="p-4 sm:p-5">Thường cho thêm đường và hương liệu</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         THÀNH PHẦN 4: OFFER & PRICE (TẠO ĐỘNG LỰC MUA NGAY - ACTION)
+         ========================================================================= -->
+    <section id="pricing" class="py-16 lg:py-24 bg-oat-yellow/30 border-b-2 border-oat-dark relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Urgency & FOMO Countdown Box -->
+        <div class="max-w-xl mx-auto bg-white border-2 border-oat-dark rounded-2xl p-4 sm:p-6 text-center shadow-comic mb-12">
+          <div class="flex items-center justify-center gap-2 text-red-600 font-display font-black text-sm sm:text-base uppercase animate-pulseSlow">
+            <span class="text-xl">🔥</span> ƯU ĐÃI ĐỘC QUYỀN TRỰC TIẾP HÔM NAY
+          </div>
+          <p class="text-xs sm:text-sm text-oat-charcoal font-semibold mt-1">Chương trình giảm giá tự động kết thúc sau:</p>
+          
+          <!-- Timer Clock -->
+          <div class="flex items-center justify-center gap-3 mt-3 font-display font-black text-2xl sm:text-3xl text-oat-dark">
+            <div class="bg-oat-cream px-3 py-1.5 rounded-lg border-2 border-oat-dark min-w-[50px]">
+              <span id="timer-hours">04</span><span class="text-xs block font-bold text-gray-500">Giờ</span>
+            </div>
+            <span>:</span>
+            <div class="bg-oat-cream px-3 py-1.5 rounded-lg border-2 border-oat-dark min-w-[50px]">
+              <span id="timer-minutes">28</span><span class="text-xs block font-bold text-gray-500">Phút</span>
+            </div>
+            <span>:</span>
+            <div class="bg-oat-cream px-3 py-1.5 rounded-lg border-2 border-oat-dark min-w-[50px]">
+              <span id="timer-seconds">52</span><span class="text-xs block font-bold text-gray-500">Giây</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Title -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-oat-dark">
+            Chọn Gói Thưởng Thức Oatside
+          </h2>
+          <p class="text-sm sm:text-base text-oat-charcoal font-medium mt-2">
+            Cam kết hàng chính hãng 100% date mới nhất, đổi trả miễn phí nếu không hài lòng với vị sữa!
+          </p>
+        </div>
+
+        <!-- 3 Pricing Tier Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Package 1: Dùng thử 1 Hộp -->
+          <div class="bg-white rounded-3xl border-2 border-oat-dark shadow-comic p-6 sm:p-8 flex flex-col justify-between hover:shadow-comic-lg transition-all">
+            <div>
+              <span class="bg-gray-100 text-gray-800 text-xs font-display font-extrabold px-3 py-1 rounded-full uppercase border border-gray-400">
+                Gói Trải Nghiệm
+              </span>
+              <h3 class="font-display font-black text-2xl text-oat-dark mt-4">1 Hộp 1000ml</h3>
+              <p class="text-xs text-gray-500 mt-1">Dành cho người mới muốn uống thử lần đầu</p>
+
+              <div class="mt-6 flex items-baseline gap-2">
+                <span class="font-display font-black text-4xl text-oat-dark">89.000đ</span>
+                <span class="text-sm text-gray-400 line-through">110.000đ</span>
+              </div>
+
+              <ul class="mt-6 space-y-3 text-sm font-medium text-oat-charcoal">
+                <li class="flex items-center gap-2">
+                  <span class="text-green-600 font-bold">✓</span> 01 Hộp Barista Blend 1000ml
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-green-600 font-bold">✓</span> Hạn sử dụng 12 tháng
+                </li>
+                <li class="flex items-center gap-2 text-gray-400">
+                  <span>✗</span> Phí ship 20k toàn quốc
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <button onclick="handleAddToCart('1 Hộp Barista Blend', 89000)" class="w-full bg-white text-oat-dark font-display font-black py-3.5 rounded-xl border-2 border-oat-dark shadow-comic-sm hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all text-sm uppercase">
+                Mua Gói Thử Nghiệm
+              </button>
+            </div>
+          </div>
+
+          <!-- Package 2: COMBO 3 HỘP (BESTSELLER - POPULAR) -->
+          <div class="bg-white rounded-3xl border-4 border-oat-dark shadow-comic-lg p-6 sm:p-8 flex flex-col justify-between relative transform md:-translate-y-4 bg-gradient-to-b from-oat-cream to-white">
+            
+            <!-- Best Value Ribbon -->
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-oat-yellow text-oat-dark font-display font-black text-xs uppercase px-4 py-1.5 rounded-full border-2 border-oat-dark shadow-comic-sm">
+              ⭐ BÁN CHẠY NHẤT (TIẾT KIỆM 25%)
+            </div>
+
+            <div>
+              <span class="bg-oat-caramel text-white text-xs font-display font-extrabold px-3 py-1 rounded-full uppercase">
+                Combo Khuyên Dùng
+              </span>
+              <h3 class="font-display font-black text-2xl sm:text-3xl text-oat-dark mt-4">Combo 3 Vị Bất Bại</h3>
+              <p class="text-xs text-gray-600 mt-1">Trải nghiệm đủ Barista + Chocolate + Coffee</p>
+
+              <div class="mt-6 flex items-baseline gap-2">
+                <span class="font-display font-black text-4xl sm:text-5xl text-oat-caramel">249.000đ</span>
+                <span class="text-base text-gray-400 line-through">330.000đ</span>
+              </div>
+
+              <!-- Gift Alert -->
+              <div class="mt-4 bg-oat-yellow/40 border border-oat-yellow rounded-xl p-3 text-xs font-bold text-oat-brown flex items-center gap-2">
+                <span>🎁</span> Tặng 01 Bình Giữ Nhiệt Oatside xinh xắn
+              </div>
+
+              <ul class="mt-6 space-y-3 text-sm font-semibold text-oat-dark">
+                <li class="flex items-center gap-2">
+                  <span class="text-green-600 font-bold">✓</span> 3 Hộp 1000ml (Barista + Choco + Coffee)
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-green-600 font-bold">✓</span> <strong>MIỄN PHÍ VẬN CHUYỂN</strong> toàn quốc
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-green-600 font-bold">✓</span> Tặng sổ công thức pha chế Oatside tại nhà
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-green-600 font-bold">✓</span> Đổi vị theo ý thích tuỳ chọn
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <button onclick="handleAddToCart('Combo 3 Hộp Oatside', 249000)" class="w-full bg-oat-caramel text-white font-display font-black py-4 rounded-xl border-2 border-oat-dark shadow-comic hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all text-base uppercase tracking-wider">
+                Chốt Đơn Ngay - Nhận Quà
+              </button>
+            </div>
+          </div>
+
+          <!-- Package 3: Thùng 6 Hộp (Tiết Kiệm Gia Đình / Cafe) -->
+          <div class="bg-white rounded-3xl border-2 border-oat-dark shadow-comic p-6 sm:p-8 flex flex-col justify-between hover:shadow-comic-lg transition-all">
+            <div>
+              <span class="bg-green-100 text-green-800 text-xs font-display font-extrabold px-3 py-1 rounded-full uppercase border border-green-300">
+                Thùng Tiết Kiệm
+              </span>
+              <h3 class="font-display font-black text-2xl text-oat-dark mt-4">Thùng 6 Hộp (Gia Đình)</h3>
+              <p class="text-xs text-gray-500 mt-1">Uống mỗi ngày không lo hết hàng</p>
+
+              <div class="mt-6 flex items-baseline gap-2">
+                <span class="font-display font-black text-4xl text-oat-dark">469.000đ</span>
+                <span class="text-sm text-gray-400 line-through">660.000đ</span>
+              </div>
+
+              <ul class="mt-6 space-y-3 text-sm font-medium text-oat-charcoal">
+                <li class="flex items-center gap-2">
+                  <span class="text-green-600 font-bold">✓</span> 6 Hộp 1000ml (Chỉ 78k/hộp)
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-green-600 font-bold">✓</span> <strong>MIỄN PHÍ SHIP HỎA TỐC 2H</strong> (Nội thành)
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-green-600 font-bold">✓</span> Tặng 02 ly thuỷ tinh Oatside Retro
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <button onclick="handleAddToCart('Thùng 6 Hộp Oatside', 469000)" class="w-full bg-oat-dark text-white font-display font-black py-3.5 rounded-xl border-2 border-oat-dark shadow-comic-sm hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all text-sm uppercase">
+                Mua Thùng Siêu Tiết Kiệm
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Direct Fast Order Form Mini Checkout Section -->
+        <div id="quick-checkout" class="mt-16 max-w-2xl mx-auto bg-white rounded-3xl border-2 border-oat-dark shadow-comic-lg p-6 sm:p-10">
+          <div class="text-center mb-6">
+            <h3 class="font-display font-black text-2xl text-oat-dark">⚡ Điền Thông Tin Nhận Hàng Trong 24 Giờ</h3>
+            <p class="text-xs sm:text-sm text-gray-600 mt-1">Thanh toán COD khi nhận hàng • Kiểm tra hàng trước khi trả tiền</p>
+          </div>
+
+          <form id="order-form" onsubmit="submitOrder(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-display font-bold uppercase text-oat-dark mb-1">Gói sản phẩm bạn chọn:</label>
+              <select id="selected-package" class="w-full bg-oat-cream border-2 border-oat-dark rounded-xl px-4 py-3 font-display font-bold text-sm focus:outline-none focus:ring-2 focus:ring-oat-yellow">
+                <option value="Combo 3 Hộp (249.000đ - Quà Tặng + Freeship)">⭐ Combo 3 Vị Bất Bại - 249.000đ (Khuyên Dùng)</option>
+                <option value="Thùng 6 Hộp (469.000đ - Tiết Kiệm + Freeship)">Thùng 6 Hộp - 469.000đ (Freeship Hỏa Tốc)</option>
+                <option value="1 Hộp Thử Nghiệm (89.000đ)">1 Hộp Barista Blend - 89.000đ</option>
+              </select>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-display font-bold uppercase text-oat-dark mb-1">Họ và tên của bạn:</label>
+                <input required type="text" id="cust-name" placeholder="Ví dụ: Nguyễn Văn An" class="w-full bg-oat-cream border-2 border-oat-dark rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-oat-yellow font-medium" />
+              </div>
+              <div>
+                <label class="block text-xs font-display font-bold uppercase text-oat-dark mb-1">Số điện thoại nhận hàng:</label>
+                <input required type="tel" id="cust-phone" placeholder="Ví dụ: 0912 345 678" class="w-full bg-oat-cream border-2 border-oat-dark rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-oat-yellow font-medium" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-display font-bold uppercase text-oat-dark mb-1">Địa chỉ giao hàng chi tiết:</label>
+              <input required type="text" id="cust-address" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành" class="w-full bg-oat-cream border-2 border-oat-dark rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-oat-yellow font-medium" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-display font-bold uppercase text-oat-dark mb-1">Ghi chú giao hàng (tuỳ chọn):</label>
+              <input type="text" id="cust-notes" placeholder="Giao giờ hành chính, gọi trước khi giao..." class="w-full bg-oat-cream border-2 border-oat-dark rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-oat-yellow font-medium" />
+            </div>
+
+            <button type="submit" class="w-full bg-oat-yellow text-oat-dark font-display font-black text-lg py-4 rounded-xl border-2 border-oat-dark shadow-comic hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all mt-4 uppercase tracking-wider">
+              Xác Nhận Đặt Hàng Ngay 🚀
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         THÀNH PHẦN 5: FOOTER & TRUST (CUNG CẤP THÔNG TIN AN TOÀN - REASSURANCE)
+         ========================================================================= -->
+    <section id="faq" class="py-16 bg-white border-b-2 border-oat-dark">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Trust Badges Row -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16 text-center">
+          <div class="p-4 rounded-2xl bg-oat-cream border-2 border-oat-dark shadow-comic-sm">
+            <div class="text-2xl mb-1">🛡️</div>
+            <h4 class="font-display font-black text-xs sm:text-sm">Đổi Trả 7 Ngày</h4>
+            <p class="text-[11px] text-gray-600 font-medium">Nếu sữa hỏng hoặc lỗi seal</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-oat-cream border-2 border-oat-dark shadow-comic-sm">
+            <div class="text-2xl mb-1">📦</div>
+            <h4 class="font-display font-black text-xs sm:text-sm">Đóng Gói Chống Shock</h4>
+            <p class="text-[11px] text-gray-600 font-medium">Bảo vệ hộp nguyên vẹn</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-oat-cream border-2 border-oat-dark shadow-comic-sm">
+            <div class="text-2xl mb-1">🌿</div>
+            <h4 class="font-display font-black text-xs sm:text-sm">Chứng Nhận Halal</h4>
+            <p class="text-[11px] text-gray-600 font-medium">Tiêu chuẩn quốc tế nghiêm ngặt</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-oat-cream border-2 border-oat-dark shadow-comic-sm">
+            <div class="text-2xl mb-1">🤝</div>
+            <h4 class="font-display font-black text-xs sm:text-sm">Kiểm Tra Hàng</h4>
+            <p class="text-[11px] text-gray-600 font-medium">Đồng kiểm trước khi thanh toán</p>
+          </div>
+        </div>
+
+        <!-- FAQ Header -->
+        <div class="text-center mb-10">
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-oat-dark">Những Câu Hỏi Thường Gặp (FAQs)</h2>
+          <p class="text-sm text-gray-600 mt-2 font-medium">Tất cả những thắc mắc bạn cần biết trước khi bấm đặt hàng</p>
+        </div>
+
+        <!-- Accordion Item 1 -->
+        <div class="space-y-4">
+          <div class="border-2 border-oat-dark rounded-2xl bg-oat-cream overflow-hidden shadow-comic-sm">
+            <button onclick="toggleAccordion('faq-1')" class="w-full text-left px-6 py-4 font-display font-bold text-base sm:text-lg text-oat-dark flex items-center justify-between focus:outline-none">
+              <span>Sữa Oatside có bị quá ngọt không? Có thêm đường hoá học không?</span>
+              <span id="faq-icon-faq-1" class="transform transition-transform text-xl">＋</span>
+            </button>
+            <div id="faq-1" class="hidden px-6 pb-5 text-sm sm:text-base text-oat-charcoal font-medium leading-relaxed border-t border-dashed border-gray-300 pt-3">
+              Hoàn toàn <strong>KHÔNG</strong> có đường tinh luyện hay chất tạo ngọt nhân tạo. Vị ngọt thanh nhẹ của Oatside đến hoàn toàn từ quá trình sử dụng enzyme tự nhiên để phân giải tinh bột trong yến mạch thành đường maltose tự nhiên, cực kỳ tốt cho sức khỏe và không lo tăng cân.
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="border-2 border-oat-dark rounded-2xl bg-oat-cream overflow-hidden shadow-comic-sm">
+            <button onclick="toggleAccordion('faq-2')" class="w-full text-left px-6 py-4 font-display font-bold text-base sm:text-lg text-oat-dark flex items-center justify-between focus:outline-none">
+              <span>Hạn sử dụng bao lâu và bảo quản như thế nào sau khi mở hộp?</span>
+              <span id="faq-icon-faq-2" class="transform transition-transform text-xl">＋</span>
+            </button>
+            <div id="faq-2" class="hidden px-6 pb-5 text-sm sm:text-base text-oat-charcoal font-medium leading-relaxed border-t border-dashed border-gray-300 pt-3">
+              Khi chưa mở hộp, bạn có thể bảo quản ở nhiệt độ phòng trong vòng 12 tháng kể từ ngày sản xuất. Sau khi mở nắp seal, bạn nên bảo quản trong ngăn mát tủ lạnh (dưới 4°C) và thưởng thức ngon nhất trong vòng 5 ngày. Lắc đều trước khi rót nhé!
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="border-2 border-oat-dark rounded-2xl bg-oat-cream overflow-hidden shadow-comic-sm">
+            <button onclick="toggleAccordion('faq-3')" class="w-full text-left px-6 py-4 font-display font-bold text-base sm:text-lg text-oat-dark flex items-center justify-between focus:outline-none">
+              <span>Người bất dung nạp lactose, phụ nữ mang thai hoặc trẻ em có uống được không?</span>
+              <span id="faq-icon-faq-3" class="transform transition-transform text-xl">＋</span>
+            </button>
+            <div id="faq-3" class="hidden px-6 pb-5 text-sm sm:text-base text-oat-charcoal font-medium leading-relaxed border-t border-dashed border-gray-300 pt-3">
+              Rất an toàn! Oatside hoàn toàn không chứa sữa bò, 0% lactose và không chứa cholesterol. Sản phẩm phù hợp cho mọi đối tượng từ người ăn chay, người tập gym, trẻ em từ 1 tuổi trở lên đến phụ nữ mang thai cần bổ sung năng lượng sạch và chất xơ hòa tan beta-glucan.
+            </div>
+          </div>
+
+          <!-- Accordion Item 4 -->
+          <div class="border-2 border-oat-dark rounded-2xl bg-oat-cream overflow-hidden shadow-comic-sm">
+            <button onclick="toggleAccordion('faq-4')" class="w-full text-left px-6 py-4 font-display font-bold text-base sm:text-lg text-oat-dark flex items-center justify-between focus:outline-none">
+              <span>Thời gian giao hàng mất bao lâu? Phí vận chuyển thế nào?</span>
+              <span id="faq-icon-faq-4" class="transform transition-transform text-xl">＋</span>
+            </button>
+            <div id="faq-4" class="hidden px-6 pb-5 text-sm sm:text-base text-oat-charcoal font-medium leading-relaxed border-t border-dashed border-gray-300 pt-3">
+              Đơn hàng tại nội thành TP.HCM và Hà Nội sẽ nhận được trong vòng 24 giờ (hoặc 2 giờ nếu chọn giao hỏa tốc). Các tỉnh thành khác từ 2-3 ngày làm việc. Đặc biệt, bạn được <strong>FREESHIP 100%</strong> khi mua từ combo 2 hộp trở lên!
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (THÔNG TIN PHÁP LÝ, LIÊN HỆ & BẢO ĐẢM AN TÂM)
+       ========================================================================= -->
+  <footer class="bg-oat-dark text-white pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-gray-800">
+        
+        <!-- Col 1: Brand & Philosophy -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="inline-block bg-oat-yellow text-oat-dark px-3 py-1 font-display font-black text-2xl rounded-lg">
+            OATSIDE VIETNAM
+          </div>
+          <p class="text-sm text-gray-300 font-medium leading-relaxed max-w-sm">
+            Sữa yến mạch ngon chuẩn barista, sinh ra để bạn yêu thích sữa hạt mỗi sáng. Béo thơm tự nhiên, trân trọng sức khoẻ của bạn và hành tinh xanh.
+          </p>
+          <div class="pt-2 text-xs text-gray-400 space-y-1">
+            <p>📍 Văn phòng đại diện: Tòa nhà Landmark, Quận 1, TP. Hồ Chí Minh</p>
+            <p>📞 Hotline CSKH: 1900 888 999 (8:00 - 21:00 hàng ngày)</p>
+            <p>✉️ Email: hello@oatside.vn</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="font-display font-black text-base text-oat-yellow uppercase tracking-wider">Thông Tin Hữu Ích</h4>
+          <ul class="space-y-2 text-sm text-gray-300 font-medium">
+            <li><a href="#about" class="hover:text-white transition-colors">Về câu chuyện Oatside</a></li>
+            <li><a href="#flavors" class="hover:text-white transition-colors">Chứng nhận an toàn thực phẩm</a></li>
+            <li><a href="#pricing" class="hover:text-white transition-colors">Chính sách giao hàng & đổi trả</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">Đăng ký trở thành đại lý quán cafe</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Newsletter & 10% Discount Code -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="font-display font-black text-base text-oat-yellow uppercase tracking-wider">Nhận Mã Giảm Thêm 10%</h4>
+          <p class="text-xs text-gray-300">Nhập email để nhận ngay voucher giảm 10% cho đơn hàng kế tiếp cùng cẩm nang pha chế!</p>
+          <form onsubmit="subscribeNewsletter(event)" class="flex gap-2">
+            <input type="email" required placeholder="Địa chỉ email của bạn..." class="bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm flex-1 focus:outline-none focus:border-oat-yellow" />
+            <button type="submit" class="bg-oat-yellow text-oat-dark font-display font-black px-4 py-2.5 rounded-xl text-sm hover:bg-yellow-400 transition-colors">
+              Gửi Ngay
+            </button>
+          </form>
+          <div class="flex items-center gap-4 text-gray-400 text-xs pt-2">
+            <span>🔒 Bảo mật thông tin 100%</span>
+            <span>⚡ Không spam</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 font-medium gap-4">
+        <p>© 2024 - 2026 OATSIDE. Tất cả các quyền được bảo lưu.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:underline">Điều khoản dịch vụ</a>
+          <a href="#" class="hover:underline">Chính sách bảo mật</a>
+          <a href="#" class="hover:underline">Giấy phép lưu hành</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       TOAST NOTIFICATION MODAL (Micro-interaction)
+       ========================================================================= -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-oat-dark text-white border-2 border-oat-yellow rounded-2xl px-5 py-4 shadow-comic-lg flex items-center gap-3">
+      <span class="text-2xl" id="toast-icon">🎉</span>
+      <div>
+        <p class="font-display font-black text-sm text-oat-yellow" id="toast-title">Thêm vào giỏ thành công!</p>
+        <p class="text-xs text-gray-300 font-medium" id="toast-msg">Đã chọn gói Combo 3 Hộp Oatside.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       JAVASCRIPT LOGIC
+       ========================================================================= -->
+  <script>
+    // --- 1. Flavor Switcher Data & Interaction ---
+    const flavorData = {
+      barista: {
+        name: "Barista Blend 1000ml",
+        badge: "Bestseller #1",
+        badgeClass: "bg-oat-caramel text-white",
+        desc: "Hương vị nguyên bản béo ngậy tự nhiên, sinh ra để phối hợp hoàn hảo với Espresso và Matcha.",
+        glowColor: "rgba(245, 194, 66, 0.4)",
+        bandColor: "#C86D33",
+        bandText: "BARISTA"
+      },
+      chocolate: {
+        name: "Chocolate Rich Blend 1000ml",
+        badge: "Vị Ngọt Đậm Đà",
+        badgeClass: "bg-oat-choco text-white",
+        desc: "Được pha chế từ 100% hạt cacao Sulawesi hảo hạng, sánh quyện ngọt ngào như sô-cô-la đen tan chảy.",
+        glowColor: "rgba(66, 36, 22, 0.3)",
+        bandColor: "#422416",
+        bandText: "CHOCOLATE"
+      },
+      coffee: {
+        name: "Coffee Mocha Oat 1000ml",
+        badge: "Tỉnh Táo Mỗi Sáng",
+        badgeClass: "bg-oat-brown text-white",
+        desc: "Sự kết hợp bùng nổ giữa cà phê Arabica thượng hạng và yến mạch nướng thơm lừng, sẵn sàng nạp năng lượng.",
+        glowColor: "rgba(132, 80, 46, 0.3)",
+        bandColor: "#84502E",
+        bandText: "COFFEE"
+      }
+    };
+
+    function switchFlavor(flavorKey) {
+      const data = flavorData[flavorKey];
+      if (!data) return;
+
+      // Update text
+      document.getElementById('flavor-name').innerText = data.name;
+      document.getElementById('flavor-desc').innerText = data.desc;
+      
+      const badgeEl = document.getElementById('flavor-badge');
+      badgeEl.innerText = data.badge;
+      badgeEl.className = `inline-block text-xs font-display font-extrabold px-3 py-1 rounded-full uppercase tracking-wider ${data.badgeClass}`;
+
+      // Update SVG colors
+      document.getElementById('svg-band').setAttribute('fill', data.bandColor);
+      document.getElementById('svg-band-text').textContent = data.bandText;
+      document.getElementById('product-glow').style.backgroundColor = data.glowColor;
+
+      // Update buttons style
+      ['barista', 'chocolate', 'coffee'].forEach(key => {
+        const btn = document.getElementById(`btn-${key}`);
+        if (key === flavorKey) {
+          btn.className = "flavor-btn py-2 px-1 text-xs font-display font-black rounded-xl border-2 border-oat-dark bg-oat-caramel text-white shadow-comic-sm transition-transform scale-105";
+        } else {
+          btn.className = "flavor-btn py-2 px-1 text-xs font-display font-black rounded-xl border-2 border-oat-dark bg-white text-oat-dark hover:bg-gray-100 transition-transform";
+        }
+      });
+    }
+
+    // --- 2. Countdown Timer ---
+    function startCountdown() {
+      let totalSeconds = 4 * 3600 + 28 * 60 + 52; // 4h 28m 52s
+      const hoursEl = document.getElementById('timer-hours');
+      const minutesEl = document.getElementById('timer-minutes');
+      const secondsEl = document.getElementById('timer-seconds');
+
+      setInterval(() => {
+        if (totalSeconds <= 0) {
+          totalSeconds = 6 * 3600; // Reset loop
+        }
+        totalSeconds--;
+
+        const h = Math.floor(totalSeconds / 3600);
+        const m = Math.floor((totalSeconds % 3600) / 60);
+        const s = totalSeconds % 60;
+
+        if (hoursEl) hoursEl.textContent = String(h).padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = String(m).padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = String(s).padStart(2, '0');
+      }, 1000);
+    }
+    startCountdown();
+
+    // --- 3. Accordion Handler ---
+    function toggleAccordion(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById(`faq-icon-${id}`);
+      
+      if (!content) return;
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        if (icon) {
+          icon.textContent = '－';
+          icon.classList.add('rotate-180');
+        }
+      } else {
+        content.classList.add('hidden');
+        if (icon) {
+          icon.textContent = '＋';
+          icon.classList.remove('rotate-180');
+        }
+      }
+    }
+
+    // --- 4. Mobile Menu Toggle ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      // Close on link click
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+
+    // --- 5. Add To Cart / Select Package Handler ---
+    function handleAddToCart(packageName, price) {
+      const selectPackage = document.getElementById('selected-package');
+      if (selectPackage) {
+        if (packageName.includes('3 Hộp')) {
+          selectPackage.selectedIndex = 0;
+        } else if (packageName.includes('6 Hộp')) {
+          selectPackage.selectedIndex = 1;
+        } else {
+          selectPackage.selectedIndex = 2;
+        }
+      }
+
+      // Scroll to order form smoothly
+      const checkoutSection = document.getElementById('quick-checkout');
+      if (checkoutSection) {
+        checkoutSection.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      showToast("Đã chọn gói sản phẩm!", `Bạn vừa chọn: ${packageName} (${price.toLocaleString('vi-VN')}đ)`);
+    }
+
+    // --- 6. Form Submission & Toast Notification ---
+    function submitOrder(event) {
+      event.preventDefault();
+      const name = document.getElementById('cust-name').value;
+      const phone = document.getElementById('cust-phone').value;
+      const pkg = document.getElementById('selected-package').value;
+
+      showToast("🎉 ĐẶT HÀNG THÀNH CÔNG!", `Cảm ơn bạn ${name}. CSKH Oatside sẽ gọi đến SĐT ${phone} để xác nhận đơn ngay!`);
+      document.getElementById('order-form').reset();
+    }
+
+    function subscribeNewsletter(event) {
+      event.preventDefault();
+      showToast("🎁 ĐÃ GỬI MÃ GIẢM GIÁ!", "Mã OATFAN10 đã gửi tới email của bạn. Kiểm tra hòm thư nhé!");
+      event.target.reset();
+    }
+
+    function showToast(title, message) {
+      const toast = document.getElementById('toast');
+      const toastTitle = document.getElementById('toast-title');
+      const toastMsg = document.getElementById('toast-msg');
+
+      if (!toast) return;
+
+      toastTitle.innerText = title;
+      toastMsg.innerText = message;
+
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
